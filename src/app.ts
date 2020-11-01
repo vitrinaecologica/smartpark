@@ -1,13 +1,17 @@
 import express from 'express';
+import { PORT } from './config/constants';
 
 const app = express();
-const port = 3030;
+
+
 app.get('/', (req, res) => {
   res.send('Todo SmartPark debe empezar con un primer paso! Hola mundo!');
 });
-app.listen(port).on("error", (err) => {
+
+
+app.listen(PORT).on("error", (err) => {
   if (err) {
     return console.error(err);
   }
-  return console.log(`server is listening on ${port}`);
+  return console.log(`server is listening on ${PORT}`);
 });
