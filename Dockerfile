@@ -14,6 +14,8 @@ COPY ./tslint*.json ./
 
 COPY ./src ./src
 
+RUN npm ci 
+
 RUN npm install
 
 CMD ["npm", "run", "start"]
